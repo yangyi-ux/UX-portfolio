@@ -107,13 +107,9 @@
       margin-bottom: 0.3rem;
     }
 
-    .hero-name-phd {
-      font-size: 0.45em;
-      font-weight: 300;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      vertical-align: middle;
-      margin-left: 0.2em;
+    .hero-name em {
+      font-style: italic;
+      color: var(--accent);
     }
 
     .hero-title {
@@ -143,14 +139,30 @@
       font-size: 0.7rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--ink);
+      color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid var(--ink);
+      border-bottom: 1px solid var(--accent);
       padding-bottom: 0.1rem;
       transition: gap 0.3s;
+      margin-bottom: 2rem;
     }
 
     .hero-cta:hover { gap: 1.4rem; }
+
+    .hero-contact {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
     .hero-right {
       display: flex;
@@ -180,6 +192,11 @@
       letter-spacing: -0.02em;
     }
 
+    .stat-number.small {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
     .stat-number sup {
       font-size: 1rem;
       vertical-align: super;
@@ -192,7 +209,7 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-top: 0.3rem;
+      margin-top: 0.4rem;
     }
 
     .hero-regions {
@@ -205,14 +222,10 @@
       padding-top: 1rem;
     }
 
-    .hero-regions span {
-      color: var(--ink);
-    }
+    .hero-regions span { color: var(--ink); }
 
-    /* SECTION SHARED */
-    section {
-      padding: 7rem 4rem;
-    }
+    /* SECTIONS */
+    section { padding: 7rem 4rem; }
 
     .section-label {
       font-family: var(--mono);
@@ -256,11 +269,11 @@
     }
 
     .about-left h2 em {
-      font-style: normal;
-      color: var(--ink);
+      font-style: italic;
+      color: var(--accent);
     }
 
-    .about-left .about-contact {
+    .about-contact {
       margin-top: 2.5rem;
     }
 
@@ -309,15 +322,8 @@
       color: var(--accent);
     }
 
-    /* EXPERIENCE TIMELINE */
-    .experience-section {
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .timeline {
-      display: grid;
-      gap: 0;
-    }
+    /* EXPERIENCE */
+    .experience-section { border-bottom: 1px solid var(--rule); }
 
     .timeline-item {
       display: grid;
@@ -327,23 +333,20 @@
       border-top: 1px solid var(--rule);
     }
 
-    .timeline-meta {
-      padding-top: 0.2rem;
-    }
-
     .timeline-period {
       font-family: var(--mono);
       font-size: 0.65rem;
       letter-spacing: 0.12em;
       color: var(--muted);
       text-transform: uppercase;
+      padding-top: 0.2rem;
     }
 
     .timeline-org {
       font-family: var(--mono);
       font-size: 0.7rem;
       letter-spacing: 0.08em;
-      color: var(--ink);
+      color: var(--accent);
       margin-top: 0.3rem;
     }
 
@@ -363,22 +366,11 @@
     /* PORTFOLIO */
     #portfolio {
       background: #ede9e0;
-      color: var(--ink);
       border-top: 1px solid var(--rule);
     }
 
-    #portfolio .section-label {
-      color: var(--muted);
-    }
-
-    #portfolio .section-label::after {
-      background: var(--rule);
-    }
-
-    .case-studies {
-      display: grid;
-      gap: 0;
-    }
+    #portfolio .section-label { color: var(--muted); }
+    #portfolio .section-label::after { background: var(--rule); }
 
     .case-study {
       border-top: 1px solid var(--rule);
@@ -386,7 +378,6 @@
       display: grid;
       grid-template-columns: 80px 1fr 1fr;
       gap: 3rem;
-      align-start: start;
       opacity: 1;
       transform: translateY(0);
       transition: opacity 0.6s ease, transform 0.6s ease;
@@ -420,8 +411,8 @@
     }
 
     .case-left h3 em {
-      font-style: normal;
-      color: var(--ink);
+      font-style: italic;
+      color: var(--accent);
     }
 
     .case-tag {
@@ -442,10 +433,6 @@
       color: var(--muted);
       line-height: 1.75;
       margin-bottom: 1.5rem;
-    }
-
-    .case-right {
-      padding-top: 0.3rem;
     }
 
     .case-section-title {
@@ -471,8 +458,8 @@
     .case-impact {
       margin-top: 2.5rem;
       padding: 1.5rem;
-      border-left: 2px solid var(--rule);
-      background: rgba(0,0,0,0.03);
+      border-left: 2px solid var(--accent);
+      background: rgba(45,90,142,0.06);
     }
 
     .case-impact-label {
@@ -480,7 +467,7 @@
       font-size: 0.58rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--accent);
       margin-bottom: 0.6rem;
     }
 
@@ -513,6 +500,58 @@
       color: var(--muted);
     }
 
+    /* ARTWORK */
+    #artwork {
+      background: var(--paper);
+      border-top: 1px solid var(--rule);
+    }
+
+    .artwork-intro {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: #4a4a45;
+      line-height: 1.8;
+      max-width: 560px;
+      margin-bottom: 3.5rem;
+    }
+
+    .artwork-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .artwork-placeholder {
+      aspect-ratio: 4 / 3;
+      border: 1px dashed var(--rule);
+      background: #eeeae2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .artwork-placeholder:hover {
+      border-color: var(--muted);
+      background: #e8e4db;
+    }
+
+    .artwork-placeholder-icon {
+      font-size: 1.4rem;
+      color: var(--rule);
+      line-height: 1;
+    }
+
+    .artwork-placeholder-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
     /* FOOTER */
     footer {
       background: #e8e4db;
@@ -536,56 +575,14 @@
       font-size: 0.65rem;
       letter-spacing: 0.1em;
       color: var(--muted);
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
     }
 
     footer .footer-contact a {
-      color: var(--muted);
+      color: var(--accent);
       text-decoration: none;
-    }
-
-    .hero-contact {
-      margin-top: 1.5rem;
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-    }
-
-    .hero-contact a {
-      color: var(--muted);
-      text-decoration: none;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 0.05rem;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .hero-contact a:hover {
-      color: var(--ink);
-      border-color: var(--ink);
-    }
-
-    .hero-contact-sep {
-      margin: 0 0.6rem;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-left > * {
-      animation: fadeUp 0.8s ease both;
-    }
-    .hero-eyebrow { animation-delay: 0.1s; }
-    .hero-name    { animation-delay: 0.2s; }
-    .hero-title   { animation-delay: 0.3s; }
-    .hero-tagline { animation-delay: 0.4s; }
-    .hero-cta     { animation-delay: 0.5s; }
-
-    .hero-right > * {
-      animation: fadeUp 0.8s ease both;
-      animation-delay: 0.4s;
     }
 
     /* RESPONSIVE */
@@ -593,31 +590,31 @@
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
       section { padding: 5rem 1.5rem; }
-
       .hero { grid-template-columns: 1fr; }
       .hero-left { padding: 5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--rule); }
       .hero-right { padding: 3rem 1.5rem 5rem; }
-
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-
       .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
-
       .case-study { grid-template-columns: 1fr; gap: 1.5rem; }
       .case-number { display: none; }
-
+      .artwork-grid { grid-template-columns: repeat(2, 1fr); }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+
+    @media (max-width: 560px) {
+      .artwork-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="#" class="nav-name">Yang Yi</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#artwork">Artwork</a></li>
     </ul>
   </nav>
 
@@ -625,7 +622,7 @@
   <section class="hero" id="top">
     <div class="hero-left">
       <p class="hero-eyebrow">UX Research Portfolio</p>
-      <h1 class="hero-name">Yang Yi<span class="hero-name-phd">&thinsp;PhD</span></h1>
+      <h1 class="hero-name">Yang <em>Yi,</em><br>PhD</h1>
       <p class="hero-title">Lead UX Researcher &nbsp;·&nbsp; Singapore</p>
       <p class="hero-tagline">
         Translating complex human behaviour into measurable business outcomes,
@@ -634,11 +631,10 @@
       <a href="#portfolio" class="hero-cta">View Case Studies &nbsp;→</a>
       <div class="hero-contact">
         <a href="mailto:pkusociy@gmail.com">pkusociy@gmail.com</a>
-        <span class="hero-contact-sep">·</span>
-        <a href="https://www.linkedin.com/in/yi-yang-phd-09059a153/" target="_blank" rel="noopener">LinkedIn</a>
+        <span>·</span>
+        <a href="https://www.linkedin.com/in/yi-yang-phd-09059a153/" target="_blank">LinkedIn</a>
       </div>
     </div>
-
     <div class="hero-right">
       <div class="hero-stats">
         <div class="stat">
@@ -650,17 +646,16 @@
           <div class="stat-label">Regional Markets</div>
         </div>
         <div class="stat">
-          <div class="stat-number">408–1851%<sup>+</sup></div>
+          <div class="stat-number small">408–1851%<sup>+</sup></div>
           <div class="stat-label">Research-Driven Revenue Growth</div>
         </div>
         <div class="stat">
-          <div class="stat-number">National Scale</div>
+          <div class="stat-number small">National<br>Scale</div>
           <div class="stat-label">Service Redesign Impact</div>
         </div>
       </div>
       <div class="hero-regions">
-        Markets: &nbsp;
-        <span>SG &nbsp;·&nbsp; MY &nbsp;·&nbsp; TH &nbsp;·&nbsp; VN &nbsp;·&nbsp; ID &nbsp;·&nbsp; CN &nbsp;·&nbsp; JP &nbsp;·&nbsp; IN</span>
+        Markets: &nbsp;<span>SG &nbsp;·&nbsp; MY &nbsp;·&nbsp; TH &nbsp;·&nbsp; VN &nbsp;·&nbsp; ID &nbsp;·&nbsp; CN &nbsp;·&nbsp; JP &nbsp;·&nbsp; IN</span>
       </div>
     </div>
   </section>
@@ -670,23 +665,17 @@
     <div class="section-label">01 &nbsp; About</div>
     <div class="about-grid">
       <div class="about-left">
-        <h2>Research<br>that moves<br>the needle.</h2>
+        <h2>Research<br>that <em>moves</em><br>the needle.</h2>
         <div class="about-contact">
           <div class="about-contact-item">✉ &nbsp;<a href="mailto:pkusociy@gmail.com">pkusociy@gmail.com</a></div>
-          <div class="about-contact-item">&#x1f517; &nbsp;<a href="https://www.linkedin.com/in/yi-yang-phd-09059a153/" target="_blank" rel="noopener">linkedin.com/in/yi-yang-phd-09059a153</a></div>
+          <div class="about-contact-item">🔗 &nbsp;<a href="https://www.linkedin.com/in/yi-yang-phd-09059a153/" target="_blank">linkedin.com/in/yi-yang-phd-09059a153</a></div>
           <div class="about-contact-item">✦ &nbsp;English (fluent) · Mandarin (native)</div>
         </div>
       </div>
       <div class="about-right">
-        <p>
-          I am a mixed-methods researcher with deep expertise in both qualitative inquiry and quantitative analytics. My work bridges the gap between raw user data and business strategy — producing insights that are not just intellectually rigorous, but operationally actionable.
-        </p>
-        <p>
-          With over a decade of hands-on experience across Southeast Asia, China, Japan, and India, I specialise in leading complex, end-to-end research programmes for digital products and offline services. I have a strong track record of building and mentoring research teams, managing personnel, and driving workforce development — including transitioning teams from reactive, ad-hoc models to proactive, insight-driven cultures. I collaborate closely with cross-functional partners across product, design, engineering, data analytics, and marketing, and I am experienced in managing vendor relationships and aligning diverse stakeholders around research-informed decisions.
-        </p>
-        <p>
-          My interdisciplinary background in sociology, econometrics, and ethnography gives me an unusually broad toolkit — from longitudinal survey modelling and log-data analytics to contextual inquiry and focus group facilitation — equipping me to translate ambiguous business questions into well-scoped research programmes that deliver clear, actionable, and measurable outcomes.
-        </p>
+        <p>I am a mixed-methods researcher with deep expertise in both qualitative inquiry and quantitative analytics. My work bridges the gap between raw user data and business strategy — producing insights that are not just intellectually rigorous, but operationally actionable.</p>
+        <p>With over a decade of hands-on experience across Southeast Asia, China, Japan, and India, I specialise in leading complex, end-to-end research programmes for digital products and offline services. I have a strong track record of building and mentoring research teams, managing personnel, and driving workforce development — including transitioning teams from reactive, ad-hoc models to proactive, insight-driven cultures. I collaborate closely with cross-functional partners across product, design, engineering, data analytics, and marketing, and I am experienced in managing vendor relationships and aligning diverse stakeholders around research-informed decisions.</p>
+        <p>My interdisciplinary background in sociology, econometrics, and ethnography gives me an unusually broad toolkit — from longitudinal survey modelling and log-data analytics to contextual inquiry and focus group facilitation — equipping me to translate ambiguous business questions into well-scoped research programmes that deliver clear, actionable, and measurable outcomes.</p>
         <div class="about-skills">
           <span class="skill-tag">In-depth Interviews</span>
           <span class="skill-tag">Contextual Inquiry</span>
@@ -795,15 +784,13 @@
     <div class="section-label">03 &nbsp; Case Studies</div>
     <div class="case-studies">
 
-      <!-- CASE STUDY 1: User Churn in a Voice-based IM App -->
+      <!-- CASE STUDY 01 -->
       <div class="case-study">
         <div class="case-number">01</div>
         <div class="case-left">
-          <div class="case-tag">Consumer App · Generative and Evaluative Research·  Retention Research · Mixed Methods</div>
-          <h3>User Churn in an Audio Messaging App</h3>
-          <p class="case-context">
-            The product faced low new user conversion on day one and high attrition at day 7, 15, and 30 after registration. The causes behind both patterns were unknown.
-          </p>
+          <div class="case-tag">Consumer App · Generative and Evaluative Research · Retention Research · Mixed Methods</div>
+          <h3>User Churn in an <em>Audio Messaging</em> App</h3>
+          <p class="case-context">The product faced low new user conversion on day one and high attrition at day 7, 15, and 30 after registration. The causes behind both patterns were unknown.</p>
           <div class="case-section-title">Methods</div>
           <div class="methods-list">
             <span class="method-chip">Focus Group Interviews</span>
@@ -812,25 +799,15 @@
         </div>
         <div class="case-right">
           <div class="case-section-title">The Challenge</div>
-          <p class="case-body">
-            The product team had no visibility into why new users were failing to complete registration, nor why retained users were dropping off at consistent intervals. Without understanding the underlying causes, the team could not prioritise fixes or determine which features were actually driving engagement.
-          </p>
+          <p class="case-body">The product team had no visibility into why new users were failing to complete registration, nor why retained users were dropping off at consistent intervals. Without understanding the underlying causes, the team could not prioritise fixes or determine which features were actually driving engagement.</p>
 
           <div class="case-section-title">Research Aim</div>
-          <p class="case-body">
-            I designed a mixed-methods study to address two questions in parallel: what product bottlenecks and user pain points were causing day-one drop-off during registration, and what potential growth opportunities could reduce attrition at days 7, 15, and 30.
-          </p>
+          <p class="case-body">I designed a mixed-methods study to address two questions in parallel: what product bottlenecks and user pain points were causing day-one drop-off during registration, and what potential growth opportunities could reduce attrition at days 7, 15, and 30.</p>
 
           <div class="case-section-title">Findings and Actions</div>
-          <p class="case-body">
-            Log data analytics identified the key behavioural metrics needed to track user progression and pinpointed where users were exiting the registration funnel. I produced a product roadmap visualising the specific design bottlenecks driving drop-out, backed by supporting statistics.
-          </p>
-          <p class="case-body">
-            Combined focus group interviews and log data analysis also revealed that a key feature for user engagement and retention was absent from the product. I recommended the product team add this feature and surface it prominently on the landing page.
-          </p>
-          <p class="case-body">
-            Based on the findings, I provided concrete recommendations to streamline the product design, retaining and highlighting the features with high conversion rates.
-          </p>
+          <p class="case-body">Log data analytics identified the key behavioural metrics needed to track user progression and pinpointed where users were exiting the registration funnel. I produced a product roadmap visualising the specific design bottlenecks driving drop-out, backed by supporting statistics.</p>
+          <p class="case-body">Combined focus group interviews and log data analysis also revealed that a key feature for user engagement and retention was absent from the product. I recommended the product team add this feature and surface it prominently on the landing page.</p>
+          <p class="case-body">Based on the findings, I provided concrete recommendations to streamline the product design, retaining and highlighting the features with high conversion rates.</p>
 
           <div class="case-impact">
             <div class="case-impact-label">Impact</div>
@@ -839,15 +816,13 @@
         </div>
       </div>
 
-      <!-- CASE STUDY 2: Personalisation for E-Commerce App -->
+      <!-- CASE STUDY 02 -->
       <div class="case-study">
         <div class="case-number">02</div>
         <div class="case-left">
           <div class="case-tag">E-commerce · Generative Research · Mixed Methods</div>
-          <h3>Merchant Archetypes<br>and Product-Market Fit (GTM)</h3>
-          <p class="case-context">
-            A two-phase mixed-methods study to rethink how merchants are understood and to translate those insights directly into product strategy and revenue growth across multiple SEA markets.
-          </p>
+          <h3>Merchant <em>Archetypes</em> and Product-Market Fit (GTM)</h3>
+          <p class="case-context">A two-phase mixed-methods study to rethink how merchants are understood and to translate those insights directly into product strategy and revenue growth across multiple SEA markets.</p>
           <div class="case-section-title">Methods</div>
           <div class="methods-list">
             <span class="method-chip">Semi-structured Interviews</span>
@@ -857,22 +832,14 @@
         </div>
         <div class="case-right">
           <div class="case-section-title">The Challenge</div>
-          <p class="case-body">
-            Existing merchant archetypes were defined purely by sales channel and volume, with no consistent definitions for small, medium, or large merchants. These blunt categories offered no insight into user needs, pain points, or growth trajectories, and provided no foundation for improving user experience or identifying new business opportunities.
-          </p>
+          <p class="case-body">Existing merchant archetypes were defined purely by sales channel and volume, with no consistent definitions for small, medium, or large merchants. These blunt categories offered no insight into user needs, pain points, or growth trajectories, and provided no foundation for improving user experience or identifying new business opportunities.</p>
 
           <div class="case-section-title">Phase 1 — Qualitative Discovery</div>
-          <p class="case-body">
-            I designed and led 25 semi-structured interviews across Singapore, Malaysia, Thailand, Vietnam, and Indonesia, using random sampling combined with manual screening. I navigated cross-country recruitment, language barriers, varying business contexts, and significant stakeholder management challenges under tight timelines.
-          </p>
-          <p class="case-body">
-            Analysis revealed 3 behaviour-based merchant archetypes mapped along a business maturity journey. Each archetype carried distinct user needs, growth motivations, and pain points that the volume-based model had completely obscured.
-          </p>
+          <p class="case-body">I designed and led 25 semi-structured interviews across Singapore, Malaysia, Thailand, Vietnam, and Indonesia, using random sampling combined with manual screening. I navigated cross-country recruitment, language barriers, varying business contexts, and significant stakeholder management challenges under tight timelines.</p>
+          <p class="case-body">Analysis revealed 3 behaviour-based merchant archetypes mapped along a business maturity journey. Each archetype carried distinct user needs, growth motivations, and pain points that the volume-based model had completely obscured.</p>
 
           <div class="case-section-title">Phase 2 — Quantitative Translation</div>
-          <p class="case-body">
-            A follow-on study for Product X found that the correct target user group was Type II merchants, not the Type III merchants the product team had assumed. I identified key behavioural metrics from the interview data to operationalise each archetype within the company's database, used these two complementary analytical methods, I generated a validated lead list of Tyep II merchants, enabling the team to realign their GTM strategy.
-          </p>
+          <p class="case-body">A follow-on study for Product X found that the correct target user group was Type II merchants, not the Type III merchants the product team had assumed. I identified key behavioural metrics from the interview data to operationalise each archetype within the company's database, and used two complementary analytical methods to generate a validated lead list of Type II merchants, enabling the team to realign their GTM strategy.</p>
 
           <div class="case-impact">
             <div class="case-impact-label">Impact</div>
@@ -881,6 +848,73 @@
         </div>
       </div>
 
+      <!-- CASE STUDY 03 -->
+      <div class="case-study">
+        <div class="case-number">03</div>
+        <div class="case-left">
+          <div class="case-tag">Healthcare · Evaluative Research · Service Design · Policy</div>
+          <h3>Home Personal Care Services for <em>Low-income</em> Older Adults</h3>
+          <p class="case-context">Singapore. Evaluating the effectiveness of home personal care services delivered to vulnerable seniors in 1–2 room rental flats, served by care teams of social workers and healthcare aides from Seniors Activity Centres.</p>
+          <div class="case-section-title">Methods</div>
+          <div class="methods-list">
+            <span class="method-chip">Survey</span>
+            <span class="method-chip">Semi-structured Interviews</span>
+            <span class="method-chip">Contextual Inquiry</span>
+            <span class="method-chip">Focus Groups</span>
+          </div>
+        </div>
+        <div class="case-right">
+          <div class="case-section-title">Background</div>
+          <p class="case-body">The care programme delivered three categories of service to low-income elderly residents: physical and cognitive care (medical and nursing support); personal care (assistance with daily living activities and medical escort services); and social care (financial support and community connection). The research goal was to evaluate how effectively these services were meeting users' needs.</p>
+
+          <div class="case-section-title">Issues with the Original Research Design</div>
+          <p class="case-body">The initial research plan — a survey and semi-structured interviews with service users, supplemented by contextual inquiry — carried significant methodological risks. Elderly recipients in a care relationship are particularly susceptible to <strong>reporting bias</strong> and <strong>social desirability bias</strong>: they may underreport problems or overstate satisfaction to avoid conflict with caregivers they depend on. Relying solely on self-report risked producing a distorted picture of service effectiveness.</p>
+
+          <div class="case-section-title">Research Redesign</div>
+          <p class="case-body">I identified these structural limitations and proposed adding a focus group component with the frontline care team — social workers, healthcare aides, and their managers. This introduced an independent, observational lens that could triangulate against user self-reports, surface patterns invisible to individual interviews, and capture the care team's on-the-ground knowledge of unmet needs.</p>
+
+          <div class="case-section-title">Key Finding</div>
+          <p class="case-body">The care team focus groups revealed a critical gap the original design would have missed entirely. While physical, cognitive, and personal care services were functioning well, <strong>social care was significantly under-provided</strong>. Seniors' need for social participation — being accompanied outside, engaging in community activities, participating in public spaces — was recognised by frontline workers as deeply important to wellbeing, yet structurally absent from the programme's service model. This finding aligns with what is now broadly understood as "social prescribing."</p>
+
+          <div class="case-impact">
+            <div class="case-impact-label">Impact</div>
+            <p>Service design recommendations from this study were adopted by health administrators and incorporated into a <strong>national-scale eldercare service redesign</strong>, expanding the programme to include befriending, buddying, and structured social participation — improving care outcomes for vulnerable seniors across Singapore.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MY ARTWORK -->
+  <section id="artwork">
+    <div class="section-label">04 &nbsp; My Artwork</div>
+    <p class="artwork-intro">Beyond research, I paint. These works reflect the same curiosity and attentiveness to the human experience that drives my professional practice.</p>
+    <div class="artwork-grid">
+      <div class="artwork-placeholder">
+        <span class="artwork-placeholder-icon">+</span>
+        <span class="artwork-placeholder-label">Painting 1</span>
+      </div>
+      <div class="artwork-placeholder">
+        <span class="artwork-placeholder-icon">+</span>
+        <span class="artwork-placeholder-label">Painting 2</span>
+      </div>
+      <div class="artwork-placeholder">
+        <span class="artwork-placeholder-icon">+</span>
+        <span class="artwork-placeholder-label">Painting 3</span>
+      </div>
+      <div class="artwork-placeholder">
+        <span class="artwork-placeholder-icon">+</span>
+        <span class="artwork-placeholder-label">Painting 4</span>
+      </div>
+      <div class="artwork-placeholder">
+        <span class="artwork-placeholder-icon">+</span>
+        <span class="artwork-placeholder-label">Painting 5</span>
+      </div>
+      <div class="artwork-placeholder">
+        <span class="artwork-placeholder-icon">+</span>
+        <span class="artwork-placeholder-label">Painting 6</span>
+      </div>
     </div>
   </section>
 
@@ -889,20 +923,18 @@
     <div class="footer-name">Yang Yi, PhD &nbsp;·&nbsp; UX Researcher</div>
     <div class="footer-contact">
       <a href="mailto:pkusociy@gmail.com">pkusociy@gmail.com</a>
-      &nbsp;·&nbsp;
-      <a href="https://www.linkedin.com/in/yi-yang-phd-09059a153/" target="_blank" rel="noopener">LinkedIn</a>
-      &nbsp;·&nbsp; Singapore
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/yi-yang-phd-09059a153/" target="_blank">LinkedIn</a>
+      <span>·</span>
+      Singapore
     </div>
   </footer>
 
   <script>
-    // Intersection observer for case study animations
     const caseStudies = document.querySelectorAll('.case-study');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.05 });
 
